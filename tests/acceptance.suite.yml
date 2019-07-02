@@ -7,7 +7,10 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
+        - WebDriver:
+            url: https://qa.rtcamp.net/activity/
+            window_size: false # disabled in ChromeDriver
+            port: 9515
+            browser: chrome
         - \Helper\Acceptance
     step_decorators: ~        
