@@ -6,10 +6,11 @@ Setup Requirements:
 1. A PC with Windows/Mac/Linux
 2. Install XAMPP https://www.hostinger.ph/tutorials/how-to-install-composer
 3. Install Composer https://www.hostinger.ph/tutorials/how-to-install-composer
-4. In the installation sequence, indicate the php.exe on the XAMPP directory
+4. In the installation sequence for composer, indicate the php.exe on the XAMPP directory
 
 Setting up Codeception:
 1. Install Codeception dependencies
     - Go to https://codeception.com
     - Click the Quickstart Guide link/button
+    - Run this line on CMD/Command Prompt: composer require "codeception/codeception" --dev
     - 
