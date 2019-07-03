@@ -7,7 +7,7 @@ class LogInScenariosCest
     public function _before(AcceptanceTester $I)
     {
         //Verify initial page objects
-        $I->amOnPage('/');
+        $I->amOnPage('/activity');
         $I->see('Activity');
         $I->see('Username');
         $I->see('Password');
