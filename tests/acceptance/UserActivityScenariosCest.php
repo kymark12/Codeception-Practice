@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+$incrementName = 1;
 class UserActivityScenariosCest
 {
     //Pre-conditions
@@ -51,18 +51,19 @@ class UserActivityScenariosCest
         $I->see('Album Title');
         $I->see('Album Description');
         //Add variables for the album name and description for validations and success messages
-        $I->fillField('//input[@id="rtmedia_album_name"]', 'Generic Album Name 1');
+        $I->fillField('//input[@id="rtmedia_album_name"]', 'Generic Album Name');
         $I->fillField('//textarea[@id="rtmedia_album_description"]', 'This is a test and generic description of this album.');
         $I->click('//button[@id="rtmedia_create_new_album"]');
         $I->waitForElement('.rtmedia-success.rtmedia-create-album-alert', 30);
-        $I->see('Generic Album Name 1 album created successfully', '.rtmedia-success.rtmedia-create-album-alert');
+        $I->see('Generic Album Name album created successfully', '.rtmedia-success.rtmedia-create-album-alert');
         $I->click('.mfp-close');
         //Add photos on the new album
         $I->click('.primary');
-        $imageNumber = array('1', '2', '3', '4', '5');
-        foreach ($imageNumber as $key => $value) {
-            $I->attachFile('//input[@type="button"]', 'testimage$imageNumber.jpg');
-        }
-        $I->click('.start-media-upload');
+        $I->wait(2);
+        //$imageNumber = array('1', '2', '3', '4', '5');
+        //foreach ($imageNumber as $value) {
+            $I->attachFile('//input[@type="button"]', 'testimage1.jpg');
+            $I->wait(300);
+        //}
     }
 }
