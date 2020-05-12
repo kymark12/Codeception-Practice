@@ -1,4 +1,4 @@
-/* This repository is for my Codeception automated test cases for a hiring assignment */
+/* This repository is for my Codeception automated test cases*/
 
 NOTE: I did this on a windows machine while learning the framework as well, I had fun :)
 
